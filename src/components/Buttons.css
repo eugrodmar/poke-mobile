@@ -2,6 +2,16 @@
     text-align: center;
 }
 
+
+.principal{ background-color: #ffff00;
+    color: #0000CD;
+    border-radius: 5%;
+    border-color: #0000CD;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 15px;
+}
+
 .next{
     background-color: #ffff00;
     color: #0000CD;
