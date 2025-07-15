@@ -1,9 +1,10 @@
 import './App.css';
 import HeaderComponent from './components/HeaderComponents';
-import Button from './components/Button';
+import PaginationButtons from './components/PaginationButtons';
 import PokemonList from './components/PokemonList';
 import { useState } from 'react';
-import ButtPrincipal from './components/ButtPincipal';
+import PokemonListCopy from './components/PokemonList copy';
+
 
 
 function App() {
@@ -12,7 +13,7 @@ function App() {
 
 const [offset, setOffset] = useState<number>(0);
 const limit = 10;
-const [page, setPage] = useState<number>(1);
+
 
   return (
     <>
@@ -20,8 +21,8 @@ const [page, setPage] = useState<number>(1);
     <main>
       <PokemonList offset={offset} limit={limit}></PokemonList>
     </main>
-    <Button offset={offset} limit={limit} setOffset={setOffset} page={page} setPage={setPage}></Button>
-    <ButtPrincipal page={page} setOffset={setOffset} setPage={setPage}></ButtPrincipal>
+    <PaginationButtons offset={offset} limit={limit}></PaginationButtons>
+    
     </>
   );
 }

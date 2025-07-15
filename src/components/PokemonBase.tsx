@@ -1,6 +1,11 @@
 import{ IPokemon } from '../tipos';
 
+//Es el componente hijo
+
 function PokemonBase({pokemon}: {pokemon: IPokemon}){ //Se define un componente funcional que recibe una propiedad llamada pokemon, cuyo tipo es IPokemon. 
+    
+   
+    
     return(
         <li className='pokemon-base'>
             <h2>{pokemon.id}</h2>

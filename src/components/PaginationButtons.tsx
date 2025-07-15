@@ -2,26 +2,27 @@ import "./Buttons.css";
 
 
 
-function Button({offset, limit, page, setOffset, setPage}: 
+function PaginationButtons({offset, limit, setOffset}: 
     {offset: number; 
-    limit: number; 
-    page:number; 
-    setOffset: (offset: number) => void;
-    setPage: (page: number) => void;
+    limit: number;  
+    setOffset : (offset: number) => void;
 }){
+
+   
+    //Se especifican los props que va a tener el componente
 
     const Previous = () => {
     if (offset >= limit) {
       setOffset(offset - limit);
-      setPage(page - 1);
+      
     }
   };
 
   const Next = () => {
     setOffset(offset + limit);
-    setPage(page + 1);
+   
   };
-
+// Se crean dos variables que usan esos props para en el return darle una funcionalidad al componente
               
      return(
         <div className="contenedor">
@@ -37,4 +38,4 @@ function Button({offset, limit, page, setOffset, setPage}:
      )
 }
 
-export default Button;
+export default PaginationButtons;

@@ -4,12 +4,15 @@ import { IPokemon } from "../tipos";
 import PokemonBase from "./PokemonBase";
 
 
+//Es el componente padre
+
 function PokemonCard(){
 
     const[pokemon, setPokemon] = useState<IPokemon | null>(null);
     const[searchParams] = useSearchParams();
     const id = searchParams.get('id') ?? '1';
     //useSearchParams() es mejor porque en caso de que la URL cambie se puede volver renderizar 
+    //windows.location está por debajo de useSearchParams
     //ya que lee a partir de la ? (es decir, el queryParam) por lo que da igual la url
 
 
